@@ -10,7 +10,7 @@ project(planning)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # 
-include_directories(${PROJECT_SOURCE_DIR}/include)
+#include_directories(${PROJECT_SOURCE_DIR}/include)
 aux_source_directory(./ SRC_LIST)
 add_executable(planning_app ${SRC_LIST})
 
