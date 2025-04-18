@@ -1,4 +1,3 @@
-message(STATUS "pnc_map:CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
 
 project(pnc_map)
