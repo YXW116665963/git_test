@@ -1,5 +1,5 @@
 #include <iostream>
-#include "process.h"
+#include "myprocess.h"
 using std::cout,std::endl;
 
 int main()

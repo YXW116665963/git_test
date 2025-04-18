@@ -1,17 +1,23 @@
-
 # output
 message(STATUS "PROJECT_SOURCE_DIR: ${PROJECT_SOURCE_DIR}")
+message(STATUS "git_test:CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
 # sys set
 cmake_minimum_required(VERSION 3.20.0)
 set(CMAKE_CXX_STANDARD 17)
 # pro set
 project(planning)
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+add_subdirectory(src)
+#win
+# 设置动态库和exe输出路径，会传递到子cmake
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
-# 
-#include_directories(${PROJECT_SOURCE_DIR}/include)
-aux_source_directory(./ SRC_LIST)
-add_executable(planning_app ${SRC_LIST})
+#linux
+
+
+# my var
+set(PROCESS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/process)
+set(PNCMAP_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/pnc_map)
+
 
 
